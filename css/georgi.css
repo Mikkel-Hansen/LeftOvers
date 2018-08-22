@@ -1,31 +1,70 @@
-*
-{
+* {
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.leftFood-header {
+    margin-bottom: 2rem;
+}
+
+#leftFood-page .btn {
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 0.3rem 2rem;
+    text-decoration: none;
+}
+
+.leftFood-section {
+    margin-bottom: 1.5rem;
+}
+
+.leftFood-section__list {
+    margin-top: .5rem;
+    margin-left: .5rem;
+}
+
 /*MOBIL*/
-@media(max-width: 767px)
-{
-    body
-    {
+
+@media(max-width: 767px) {
+    body {
         background-color: blueviolet;
-    }   
+    }
 }
 
 /*TABLET*/
-@media (min-width: 768px) and (max-width: 1023px)
-{
-    body
-    {
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    body {
         background-color: darkorange;
-    }  
+    }
 }
-    
+
 /*NORMAL DESKTOP*/
-@media (min-width: 1024px)
-{
-    body
-    {
+
+@media (min-width: 1024px) {
+    body {
         background-color: crimson;
-    }  
+    }
 }
