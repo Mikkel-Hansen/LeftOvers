@@ -1,0 +1,38 @@
+/* styleshiiit*/
+
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Overordnet
+- Menubar
+- Main
+- Footer
+- Media Queries
+*/
+
+body {
+    background-color: black;
+}
+
+.ball {
+    z-index: 1;
+    margin-top: -40%;
+    margin-left: 50%;
+    width: 120px;
+    height: 40px;
+    background-color: #EDE053;
+    border-radius: 20px;
+    transition: 1s;
+    line-height: 40px;
+    text-align: center;
+}
+
+.fridge {
+    max-width: 60%;
+    margin-left: 20%;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    padding-top: 1%;
+}
