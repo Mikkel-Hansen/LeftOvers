@@ -4,16 +4,9 @@
 }
 
 /*MOBIL*/
-@media(max-width: 767px)
-{
-    body
-    {
-        background-color: blueviolet;
-    }   
-}
 
 /*TABLET*/
-@media (min-width: 768px) and (max-width: 1023px)
+@media (min-width: 768px)
 {
     body
     {
