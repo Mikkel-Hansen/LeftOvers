@@ -25,9 +25,9 @@ h3 {
   background-size: cover;
   background-position: center; }
 
-.ingredients-header {
+.ingredients__header {
   margin-bottom: 2rem; }
-  .ingredients-header .ingredients__headline {
+  .ingredients__header .ingredients-header__headline {
     color: #61BD4F;
     font-family: "Do Hyeon", sans-serif;
     font-size: 2rem;
@@ -35,57 +35,26 @@ h3 {
     margin: 5vh 5vw 0 5vw;
     line-height: 3rem; }
 
-.ingredients-main {
+.ingredients__main {
+  display: grid;
   padding: 0 5vw; }
+  .ingredients__main .ingredients__list {
+    margin-bottom: 2.5rem; }
+    .ingredients__main .ingredients__list.ingredients__list--meats {
+      grid-column: 1 / span 6; }
+    .ingredients__main .ingredients__list.ingredients__list--vegetables {
+      grid-column: 1 / span 3; }
+    .ingredients__main .ingredients__list.ingredients__list--fruits {
+      grid-column: 4 / span 3; }
+    .ingredients__main .ingredients__list .ingredients-list__headline {
+      font-family: "Do Hyeon", sans-serif;
+      color: #cfcfcf;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem; }
 
-.ingredients-section {
-  margin-bottom: 2.5rem; }
-
-.ingredients-section__list {
-  margin-left: 1.5rem; }
-
-.ingredients-section__heading {
-  font-family: "Do Hyeon", sans-serif;
-  color: #cfcfcf;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem; }
-
-.checkbox-container label {
-  font-size: 1.1rem;
-  color: #c5c5c5; }
-
-.checkbox-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem; }
-
-.checkbox {
-  width: 20px;
-  height: 20px;
-  margin: 0;
-  border: 0;
-  margin-right: 1rem;
-  background-color: #c5c5c5;
-  display: inline-block;
-  -webkit-appearance: none;
-  border-radius: 5px;
-  position: relative; }
-
-.checkbox:checked {
-  background-color: #e9ecee;
-  border: 1px solid #adb8c0;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
-  color: #99a1a7; }
-
-.checkbox:checked:after {
-  content: '\2714';
-  font-size: 2rem;
-  position: absolute;
-  width: 100%;
-  color: #18cf36;
-  bottom: 0px; }
-
-.ingredients .btn {
+.ingredients__btn {
+  grid-column: 1 / span 6;
   color: #141414;
   border-radius: 10px;
   border: 1px solid black;
@@ -97,10 +66,71 @@ h3 {
   text-align: center;
   margin: 0 5vw 5vh 5vw; }
 
+.ingredients__list--meats ul {
+  display: flex;
+  flex-wrap: wrap; }
+
+.list__checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex: 0 0 50%; }
+  .list__checkbox label {
+    font-size: 0.9rem;
+    color: #c5c5c5; }
+
+.checkbox {
+  outline: none;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border: 0;
+  margin-right: 1rem;
+  background-color: #c5c5c5;
+  display: inline-block;
+  -webkit-appearance: none;
+  border-radius: 5px;
+  position: relative; }
+  .checkbox:checked {
+    background-color: #e9ecee;
+    border: 1px solid #adb8c0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+    color: #99a1a7; }
+    .checkbox:checked:after {
+      content: '\2714';
+      font-size: 2rem;
+      position: absolute;
+      width: 100%;
+      color: #18cf36;
+      bottom: 0px; }
+
 /*TABLET*/
 @media (min-width: 768px) {
-  body {
-    background-color: darkorange; } }
+  .ingredients__main {
+    display: grid;
+    padding: 0 5vw; }
+    .ingredients__main .ingredients__list {
+      margin-bottom: 2.5rem; }
+      .ingredients__main .ingredients__list.ingredients__list--meats {
+        grid-column: 1 / span 6; }
+      .ingredients__main .ingredients__list.ingredients__list--vegetables {
+        grid-column: 1 / span 6;
+        grid-row-start: 2; }
+        .ingredients__main .ingredients__list.ingredients__list--vegetables ul {
+          display: flex;
+          flex-wrap: wrap; }
+      .ingredients__main .ingredients__list.ingredients__list--fruits {
+        grid-column: 1 / span 6;
+        grid-row-start: 3; }
+        .ingredients__main .ingredients__list.ingredients__list--fruits ul {
+          display: flex;
+          flex-wrap: wrap; }
+
+  .ingredients__btn {
+    grid-column: 2 / span 4; }
+
+  .list__checkbox {
+    flex: 0 0 25%; } }
 /*NORMAL DESKTOP*/
 @media (min-width: 1024px) {
   body {
